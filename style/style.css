@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+.grid{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid rgb(35, 205, 218);
+    /*grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, max-content);*/
+    grid-template-areas: 
+    "header header header"
+    "hero hero hero"
+    "menu main main"
+    "menu banner banner"
+    "menu extra image";
+}
+
+.grid .item{
+    padding: 70px 0px;
+    background-color: rgb(63, 29, 29);
+    color: white;
+    text-align: center;
+}
+
+.grid .item_1{
+    background-color: rgb(202, 136, 49);
+    grid-area: header;
+}
+
+.grid .item_2{
+    background-color: rgb(196, 214, 36);
+    grid-area: hero;
+}
+
+.grid .item_3{
+    background-color: rgb(101, 214, 36);
+    grid-area: menu;
+}
+
+.grid .item_4{
+    background-color: rgb(4, 61, 14);
+    grid-area: main;
+}
+.grid .item_5{
+    background-color: rgb(30, 97, 141);
+  grid-area: banner;
+}
+.grid .item_6{
+    background-color: rgb(9, 26, 121);
+    grid-area: extra;
+}
+.grid .item_7{
+    background-color: rgb(66, 5, 107);
+    grid-area: image;
+}
+.grid .item_8{
+    background-color: rgb(10, 129, 109);
+    grid-column-start: 5;
+    grid-row-end: ;
+}
+
+.gallery img{
+    width: 100%;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
+}
